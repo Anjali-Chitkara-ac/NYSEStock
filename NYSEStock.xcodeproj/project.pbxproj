@@ -9,13 +9,21 @@
 /* Begin PBXBuildFile section */
 		25B5E225270FEB5400155C60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B5E224270FEB5400155C60 /* AppDelegate.swift */; };
 		25B5E227270FEB5400155C60 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B5E226270FEB5400155C60 /* SceneDelegate.swift */; };
-		25B5E229270FEB5400155C60 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B5E228270FEB5400155C60 /* ViewController.swift */; };
 		25B5E22C270FEB5400155C60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25B5E22A270FEB5400155C60 /* Main.storyboard */; };
 		25B5E22E270FEB5800155C60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25B5E22D270FEB5800155C60 /* Assets.xcassets */; };
 		25B5E231270FEB5800155C60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25B5E22F270FEB5800155C60 /* LaunchScreen.storyboard */; };
 		25B5E23C270FEB5800155C60 /* NYSEStockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B5E23B270FEB5800155C60 /* NYSEStockTests.swift */; };
 		25B5E246270FEB5800155C60 /* NYSEStockUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B5E245270FEB5800155C60 /* NYSEStockUITests.swift */; };
 		25B5E248270FEB5800155C60 /* NYSEStockUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B5E247270FEB5800155C60 /* NYSEStockUITestsLaunchTests.swift */; };
+		25B5E259270FEF5200155C60 /* CompanyInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B5E258270FEF5200155C60 /* CompanyInfo.swift */; };
+		25B5E25D2718077C00155C60 /* StockTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B5E25C2718077C00155C60 /* StockTableViewController.swift */; };
+		25B5E26227191B7000155C60 /* StockTableViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B5E26127191B7000155C60 /* StockTableViewCode.swift */; };
+		25B5E26427191C0F00155C60 /* StockNetworkingCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B5E26327191C0F00155C60 /* StockNetworkingCode.swift */; };
+		25B5E26727191D7800155C60 /* StockTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B5E26527191D7800155C60 /* StockTableViewCell.swift */; };
+		25B5E26827191D7800155C60 /* StockTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25B5E26627191D7800155C60 /* StockTableViewCell.xib */; };
+		3DEB4EF0DD8A8407AA434D5F /* Pods_NYSEStock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5338ECE623084625264F69C /* Pods_NYSEStock.framework */; };
+		A904A0CC267FC33F947FA23F /* Pods_NYSEStockTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCD8493A2980CBFD0870E8F2 /* Pods_NYSEStockTests.framework */; };
+		FA8C8F07CB678D4170316DC7 /* Pods_NYSEStock_NYSEStockUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6BC44876B6A4C7C4CB327BA /* Pods_NYSEStock_NYSEStockUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,10 +44,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C754A00534E451C2126FCB0 /* Pods-NYSEStock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYSEStock.release.xcconfig"; path = "Target Support Files/Pods-NYSEStock/Pods-NYSEStock.release.xcconfig"; sourceTree = "<group>"; };
+		1F17B84B8B17139071272791 /* Pods-NYSEStockTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYSEStockTests.debug.xcconfig"; path = "Target Support Files/Pods-NYSEStockTests/Pods-NYSEStockTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1FE77E739A0F376769CFCC1C /* Pods-NYSEStock-NYSEStockUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYSEStock-NYSEStockUITests.debug.xcconfig"; path = "Target Support Files/Pods-NYSEStock-NYSEStockUITests/Pods-NYSEStock-NYSEStockUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		25B5E221270FEB5400155C60 /* NYSEStock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NYSEStock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25B5E224270FEB5400155C60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25B5E226270FEB5400155C60 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		25B5E228270FEB5400155C60 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		25B5E22B270FEB5400155C60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		25B5E22D270FEB5800155C60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		25B5E230270FEB5800155C60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +59,18 @@
 		25B5E241270FEB5800155C60 /* NYSEStockUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NYSEStockUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		25B5E245270FEB5800155C60 /* NYSEStockUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYSEStockUITests.swift; sourceTree = "<group>"; };
 		25B5E247270FEB5800155C60 /* NYSEStockUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYSEStockUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		25B5E258270FEF5200155C60 /* CompanyInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyInfo.swift; sourceTree = "<group>"; };
+		25B5E25C2718077C00155C60 /* StockTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockTableViewController.swift; sourceTree = "<group>"; };
+		25B5E26127191B7000155C60 /* StockTableViewCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockTableViewCode.swift; sourceTree = "<group>"; };
+		25B5E26327191C0F00155C60 /* StockNetworkingCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockNetworkingCode.swift; sourceTree = "<group>"; };
+		25B5E26527191D7800155C60 /* StockTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockTableViewCell.swift; sourceTree = "<group>"; };
+		25B5E26627191D7800155C60 /* StockTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StockTableViewCell.xib; sourceTree = "<group>"; };
+		453D64A95F10CE275AB85378 /* Pods-NYSEStockTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYSEStockTests.release.xcconfig"; path = "Target Support Files/Pods-NYSEStockTests/Pods-NYSEStockTests.release.xcconfig"; sourceTree = "<group>"; };
+		4CB4E4F0AB8C2B1ABDDE8B31 /* Pods-NYSEStock-NYSEStockUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYSEStock-NYSEStockUITests.release.xcconfig"; path = "Target Support Files/Pods-NYSEStock-NYSEStockUITests/Pods-NYSEStock-NYSEStockUITests.release.xcconfig"; sourceTree = "<group>"; };
+		CCD8493A2980CBFD0870E8F2 /* Pods_NYSEStockTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NYSEStockTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5338ECE623084625264F69C /* Pods_NYSEStock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NYSEStock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6BC44876B6A4C7C4CB327BA /* Pods_NYSEStock_NYSEStockUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NYSEStock_NYSEStockUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDAB228ED7391E1513568087 /* Pods-NYSEStock.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYSEStock.debug.xcconfig"; path = "Target Support Files/Pods-NYSEStock/Pods-NYSEStock.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DEB4EF0DD8A8407AA434D5F /* Pods_NYSEStock.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A904A0CC267FC33F947FA23F /* Pods_NYSEStockTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA8C8F07CB678D4170316DC7 /* Pods_NYSEStock_NYSEStockUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +108,8 @@
 				25B5E23A270FEB5800155C60 /* NYSEStockTests */,
 				25B5E244270FEB5800155C60 /* NYSEStockUITests */,
 				25B5E222270FEB5400155C60 /* Products */,
+				86789478A43C6CB74884F647 /* Pods */,
+				624DEC7F4E2C133C56691F61 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,12 +126,11 @@
 		25B5E223270FEB5400155C60 /* NYSEStock */ = {
 			isa = PBXGroup;
 			children = (
+				25B5E26027191B1B00155C60 /* View */,
+				25B5E25F27191B0500155C60 /* Controller */,
+				25B5E25E27191ACE00155C60 /* Model */,
 				25B5E224270FEB5400155C60 /* AppDelegate.swift */,
 				25B5E226270FEB5400155C60 /* SceneDelegate.swift */,
-				25B5E228270FEB5400155C60 /* ViewController.swift */,
-				25B5E22A270FEB5400155C60 /* Main.storyboard */,
-				25B5E22D270FEB5800155C60 /* Assets.xcassets */,
-				25B5E22F270FEB5800155C60 /* LaunchScreen.storyboard */,
 				25B5E232270FEB5800155C60 /* Info.plist */,
 			);
 			path = NYSEStock;
@@ -127,6 +153,59 @@
 			path = NYSEStockUITests;
 			sourceTree = "<group>";
 		};
+		25B5E25E27191ACE00155C60 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				25B5E258270FEF5200155C60 /* CompanyInfo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		25B5E25F27191B0500155C60 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				25B5E25C2718077C00155C60 /* StockTableViewController.swift */,
+				25B5E26127191B7000155C60 /* StockTableViewCode.swift */,
+				25B5E26327191C0F00155C60 /* StockNetworkingCode.swift */,
+				25B5E26527191D7800155C60 /* StockTableViewCell.swift */,
+				25B5E26627191D7800155C60 /* StockTableViewCell.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		25B5E26027191B1B00155C60 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				25B5E22A270FEB5400155C60 /* Main.storyboard */,
+				25B5E22D270FEB5800155C60 /* Assets.xcassets */,
+				25B5E22F270FEB5800155C60 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		624DEC7F4E2C133C56691F61 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E5338ECE623084625264F69C /* Pods_NYSEStock.framework */,
+				E6BC44876B6A4C7C4CB327BA /* Pods_NYSEStock_NYSEStockUITests.framework */,
+				CCD8493A2980CBFD0870E8F2 /* Pods_NYSEStockTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		86789478A43C6CB74884F647 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FDAB228ED7391E1513568087 /* Pods-NYSEStock.debug.xcconfig */,
+				0C754A00534E451C2126FCB0 /* Pods-NYSEStock.release.xcconfig */,
+				1FE77E739A0F376769CFCC1C /* Pods-NYSEStock-NYSEStockUITests.debug.xcconfig */,
+				4CB4E4F0AB8C2B1ABDDE8B31 /* Pods-NYSEStock-NYSEStockUITests.release.xcconfig */,
+				1F17B84B8B17139071272791 /* Pods-NYSEStockTests.debug.xcconfig */,
+				453D64A95F10CE275AB85378 /* Pods-NYSEStockTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,9 +213,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 25B5E24B270FEB5800155C60 /* Build configuration list for PBXNativeTarget "NYSEStock" */;
 			buildPhases = (
+				5299FDE16146FCFAB2BC9A06 /* [CP] Check Pods Manifest.lock */,
 				25B5E21D270FEB5400155C60 /* Sources */,
 				25B5E21E270FEB5400155C60 /* Frameworks */,
 				25B5E21F270FEB5400155C60 /* Resources */,
+				3EAA5EEC852E40CDCF27D3CE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,6 +232,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 25B5E24E270FEB5800155C60 /* Build configuration list for PBXNativeTarget "NYSEStockTests" */;
 			buildPhases = (
+				D029C5C66AB1EE2803C1B6A7 /* [CP] Check Pods Manifest.lock */,
 				25B5E233270FEB5800155C60 /* Sources */,
 				25B5E234270FEB5800155C60 /* Frameworks */,
 				25B5E235270FEB5800155C60 /* Resources */,
@@ -169,9 +251,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 25B5E251270FEB5800155C60 /* Build configuration list for PBXNativeTarget "NYSEStockUITests" */;
 			buildPhases = (
+				A9C7B75AE238D45442DED4BE /* [CP] Check Pods Manifest.lock */,
 				25B5E23D270FEB5800155C60 /* Sources */,
 				25B5E23E270FEB5800155C60 /* Frameworks */,
 				25B5E23F270FEB5800155C60 /* Resources */,
+				E1C28F8595907573F49871FF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -233,6 +317,7 @@
 			files = (
 				25B5E231270FEB5800155C60 /* LaunchScreen.storyboard in Resources */,
 				25B5E22E270FEB5800155C60 /* Assets.xcassets in Resources */,
+				25B5E26827191D7800155C60 /* StockTableViewCell.xib in Resources */,
 				25B5E22C270FEB5400155C60 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -253,13 +338,120 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3EAA5EEC852E40CDCF27D3CE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NYSEStock/Pods-NYSEStock-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NYSEStock/Pods-NYSEStock-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NYSEStock/Pods-NYSEStock-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5299FDE16146FCFAB2BC9A06 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NYSEStock-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A9C7B75AE238D45442DED4BE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NYSEStock-NYSEStockUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D029C5C66AB1EE2803C1B6A7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NYSEStockTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E1C28F8595907573F49871FF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NYSEStock-NYSEStockUITests/Pods-NYSEStock-NYSEStockUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NYSEStock-NYSEStockUITests/Pods-NYSEStock-NYSEStockUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NYSEStock-NYSEStockUITests/Pods-NYSEStock-NYSEStockUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		25B5E21D270FEB5400155C60 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25B5E229270FEB5400155C60 /* ViewController.swift in Sources */,
+				25B5E26727191D7800155C60 /* StockTableViewCell.swift in Sources */,
+				25B5E25D2718077C00155C60 /* StockTableViewController.swift in Sources */,
 				25B5E225270FEB5400155C60 /* AppDelegate.swift in Sources */,
+				25B5E259270FEF5200155C60 /* CompanyInfo.swift in Sources */,
+				25B5E26427191C0F00155C60 /* StockNetworkingCode.swift in Sources */,
+				25B5E26227191B7000155C60 /* StockTableViewCode.swift in Sources */,
 				25B5E227270FEB5400155C60 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -434,6 +626,7 @@
 		};
 		25B5E24C270FEB5800155C60 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDAB228ED7391E1513568087 /* Pods-NYSEStock.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -461,6 +654,7 @@
 		};
 		25B5E24D270FEB5800155C60 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C754A00534E451C2126FCB0 /* Pods-NYSEStock.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -488,6 +682,7 @@
 		};
 		25B5E24F270FEB5800155C60 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F17B84B8B17139071272791 /* Pods-NYSEStockTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +707,7 @@
 		};
 		25B5E250270FEB5800155C60 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 453D64A95F10CE275AB85378 /* Pods-NYSEStockTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -536,6 +732,7 @@
 		};
 		25B5E252270FEB5800155C60 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FE77E739A0F376769CFCC1C /* Pods-NYSEStock-NYSEStockUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -558,6 +755,7 @@
 		};
 		25B5E253270FEB5800155C60 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4CB4E4F0AB8C2B1ABDDE8B31 /* Pods-NYSEStock-NYSEStockUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
