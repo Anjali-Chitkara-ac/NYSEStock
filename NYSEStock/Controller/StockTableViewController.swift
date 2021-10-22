@@ -18,7 +18,7 @@ class StockTableViewController: UITableViewController {
     let companyProfileURL = "https://financialmodelingprep.com/api/v3/profile/"
     let apiKey = "ff43fa116bfd506dd19ea0b5127dce8d"
     
-    var arr = ["abcd","efgh"]
+    var arrCompanyInfo : [CompanyInfo] = [CompanyInfo]()
     
 
     @IBOutlet var tblView: UITableView!
@@ -39,6 +39,10 @@ class StockTableViewController: UITableViewController {
 //        }
 
     }
+    
+//    override func viewDidAppear(_ animated: Bool) {
+//        loadStockValues()
+//    }
     
     @objc func refreshData(){
         loadStockValues()
@@ -63,7 +67,7 @@ class StockTableViewController: UITableViewController {
             if symbol == "" {
                 return
             }
-            self.storeValuesInDb(symbol.uppercased())
+            self.storeValuesInDB(symbol.uppercased())
         }
         
         let cancelButton = UIAlertAction(title: "Cancel", style: .default) { action in
@@ -81,34 +85,15 @@ class StockTableViewController: UITableViewController {
         self.present(actionController, animated: true, completion: nil)
     }
     
-    func storeValuesInDb(_ symbol : String){
-        print(symbol)
-        
-        getCompanyInfo(symbol)
-            .done { companyJSON in
-
-                if companyJSON.count == 0 {
-                    return
+    func storeValuesInDB(_ symbol : String ){
+            
+            getCompanyInfo(symbol)
+                .done { company in
+                    self.addStockInDB(company)
                 }
-
-                let companyInfo = CompanyInfo()
-                companyInfo.symbol = companyJSON["symbol"].stringValue
-                companyInfo.price = companyJSON["price"].floatValue
-                companyInfo.volAvg = companyJSON["volAvg"].intValue
-                companyInfo.companyName = companyJSON["companyName"].stringValue
-                companyInfo.exchangeShortName = companyJSON["exchangeShortName"].stringValue
-                companyInfo.website = companyJSON["website"].stringValue
-                companyInfo.desc = companyJSON["description"].stringValue
-                companyInfo.image = companyJSON["image"].stringValue
-                
-                //print(companyInfo)
-
-                self.addStockInDB(companyInfo)
-
-            }
-            .catch{ (error) in
-                print(error)
-            }
+                .catch{ (error) in
+                    print(error)
+                }
     }
     
 
@@ -125,47 +110,73 @@ class StockTableViewController: UITableViewController {
         
     }
     
-    func getCompanyInfo(_ symbol : String) -> Promise <JSON> {
-        
-        return Promise< JSON > { seal -> Void in
-            
-            let url = companyProfileURL + symbol + "?apikey=" + apiKey
-                        
-            AF.request(url).responseJSON { response in
-        
-                if response.error != nil {
-                    seal.reject(response.error!)
+    func getCompanyInfo(_ symbol : String) -> Promise<CompanyInfo>{
+            return Promise<CompanyInfo> { seal -> Void in
+                let url = companyProfileURL + symbol + "?apikey=" + apiKey
+                
+                AF.request(url).responseJSON { response in
+                    
+                    if response.error != nil {
+                        seal.reject(response.error!)
+                    }
+                    
+                    let stocks = JSON( response.data!).array
+                    
+                    guard let firstStock = stocks!.first else { seal.fulfill(CompanyInfo())
+                        return
+                    }
+                    
+                    let companyInfo = CompanyInfo()
+                    companyInfo.symbol = firstStock["symbol"].stringValue
+                    companyInfo.price = firstStock["price"].floatValue
+                    companyInfo.volAvg = firstStock["volAvg"].intValue
+                    companyInfo.companyName = firstStock["companyName"].stringValue
+                    companyInfo.exchangeShortName = firstStock["exchangeShortName"].stringValue
+                    companyInfo.website = firstStock["website"].stringValue
+                    companyInfo.desc = firstStock["description"].stringValue
+                    companyInfo.image = firstStock["image"].stringValue
+                    
+                    seal.fulfill(companyInfo)
+                    
                 }
-                
-                let stocks = JSON( response.data!).array
+            }
+        }// End of getCompanyInfo
+    
+    func getAllCompanyInfo(_ companies: [CompanyInfo] ) -> Promise<[CompanyInfo]> {
             
-                guard let firstStock = stocks!.first else { seal.fulfill(JSON())
-                    return
-                }
-                
-                seal.fulfill(firstStock)
-                
-            }// AF Response JSON
-        }// Promise return
-    }// End of function
+            var promises: [Promise< CompanyInfo >] = []
+            
+            for i in 0 ... companies.count - 1 {
+                promises.append( getCompanyInfo(companies[i].symbol) )
+            }
+            
+            return when(fulfilled: promises)
+            
+   }
     
     func loadStockValues(){
-
+            
             do{
                 let realm = try Realm()
                 let companies = realm.objects(CompanyInfo.self)
-
-                arr.removeAll()
-
-                for company in companies{
-                    arr.append( "\(company.symbol) \(company.companyName)" )
+             
+                arrCompanyInfo.removeAll()
+                
+                getAllCompanyInfo(Array(companies)).done { companiesInfo in
+                    self.arrCompanyInfo.append(contentsOf: companiesInfo)
+                    //self.arrSearch.append(contentsOf: companiesInfo)
+                    self.tblView.reloadData()
                 }
-
-
+                .catch { error in
+                    print(error)
+                }
+                
+                
+                
             }catch{
                 print("Error in reading Database \(error)")
             }
-
-    }
+            
+        }
         
 }

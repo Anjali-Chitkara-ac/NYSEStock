@@ -16,14 +16,15 @@ import PromiseKit
 extension  StockTableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return arr.count
+        return arrCompanyInfo.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let company = arrCompanyInfo[indexPath.row]
 
-        cell.textLabel?.text = arr[indexPath.row]
+        cell.textLabel?.text = "\(company.symbol) \(company.companyName) $\(company.price)"
 
         return cell
     }
@@ -32,7 +33,7 @@ extension  StockTableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
-            arr.remove(at: indexPath.row)
+            arrCompanyInfo.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
