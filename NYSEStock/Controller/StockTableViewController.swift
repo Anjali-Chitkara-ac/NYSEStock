@@ -12,13 +12,14 @@ import SwiftSpinner
 import Alamofire
 import PromiseKit
 
-class StockTableViewController: UITableViewController {
+class StockTableViewController: UITableViewController, UISearchBarDelegate {
     
     let stockQuoteURL = "https://financialmodelingprep.com/api/v3/quote-short/"
     let companyProfileURL = "https://financialmodelingprep.com/api/v3/profile/"
     let apiKey = "ff43fa116bfd506dd19ea0b5127dce8d"
     
     var arrCompanyInfo : [CompanyInfo] = [CompanyInfo]()
+    var arrSearch : [CompanyInfo] = [CompanyInfo]()
     
 
     @IBOutlet var tblView: UITableView!
@@ -89,7 +90,7 @@ class StockTableViewController: UITableViewController {
                 
                 getAllCompanyInfo(Array(companies)).done { companiesInfo in
                     self.arrCompanyInfo.append(contentsOf: companiesInfo)
-                    //self.arrSearch.append(contentsOf: companiesInfo)
+                    self.arrSearch.append(contentsOf: companiesInfo)
                     self.tblView.reloadData()
                 }
                 .catch { error in
@@ -103,5 +104,19 @@ class StockTableViewController: UITableViewController {
             }
             
         }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        guard !searchBar.text!.isEmpty else{
+            arrCompanyInfo = arrSearch
+            tblView.reloadData()
+            return
+        }
+        //user has typed something
+        arrCompanyInfo = arrSearch.filter({ company in
+            company.symbol.lowercased().contains(searchBar.text!.lowercased())
+        })
+        tblView.reloadData()
+    }
         
 }
