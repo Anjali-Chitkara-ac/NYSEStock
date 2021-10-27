@@ -21,11 +21,15 @@ extension  StockTableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        let company = arrCompanyInfo[indexPath.row]
-
-        cell.textLabel?.text = "\(company.symbol) \(company.companyName) $\(company.price)"
-
+        //let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        //let company = arrCompanyInfo[indexPath.row]
+        //cell.textLabel?.text = "\(company.symbol) \(company.companyName) $\(company.price)"
+        
+        let cell = Bundle.main.loadNibNamed("StockTableViewCell", owner: self, options: nil)?.first as! StockTableViewCell
+        cell.lblSymbol.text = arrCompanyInfo[indexPath.row].symbol
+        cell.lblCompanyName.text = arrCompanyInfo[indexPath.row].companyName
+        cell.lblPrice.text = "$ \(arrCompanyInfo[indexPath.row].price)"
+        
         return cell
     }
     
