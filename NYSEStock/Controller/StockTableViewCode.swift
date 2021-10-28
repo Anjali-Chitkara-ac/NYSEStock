@@ -14,7 +14,7 @@ import Alamofire
 import PromiseKit
 
 extension  StockTableViewController {
-    
+        
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return arrCompanyInfo.count
     }
@@ -41,6 +41,19 @@ extension  StockTableViewController {
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+        }
+    }
+    
+    //for details page/segue
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        compantDetail = arrCompanyInfo[indexPath.row]
+        performSegue(withIdentifier: "SegueDetails", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier=="SegueDetails"){
+            let detalisVC = segue.destination as! DetailsViewController
+            detalisVC.companyInfo = compantDetail
         }
     }
     

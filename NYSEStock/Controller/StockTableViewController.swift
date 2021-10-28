@@ -21,6 +21,7 @@ class StockTableViewController: UITableViewController, UISearchBarDelegate {
     var arrCompanyInfo : [CompanyInfo] = [CompanyInfo]()
     var arrSearch : [CompanyInfo] = [CompanyInfo]()
     
+    var compantDetail : CompanyInfo?
 
     @IBOutlet var tblView: UITableView!
     

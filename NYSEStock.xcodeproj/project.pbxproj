@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		25493121272A28C100C58C70 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25493120272A28C000C58C70 /* DetailsViewController.swift */; };
 		25B5E225270FEB5400155C60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B5E224270FEB5400155C60 /* AppDelegate.swift */; };
 		25B5E227270FEB5400155C60 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B5E226270FEB5400155C60 /* SceneDelegate.swift */; };
 		25B5E22C270FEB5400155C60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25B5E22A270FEB5400155C60 /* Main.storyboard */; };
@@ -47,6 +48,7 @@
 		0C754A00534E451C2126FCB0 /* Pods-NYSEStock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYSEStock.release.xcconfig"; path = "Target Support Files/Pods-NYSEStock/Pods-NYSEStock.release.xcconfig"; sourceTree = "<group>"; };
 		1F17B84B8B17139071272791 /* Pods-NYSEStockTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYSEStockTests.debug.xcconfig"; path = "Target Support Files/Pods-NYSEStockTests/Pods-NYSEStockTests.debug.xcconfig"; sourceTree = "<group>"; };
 		1FE77E739A0F376769CFCC1C /* Pods-NYSEStock-NYSEStockUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYSEStock-NYSEStockUITests.debug.xcconfig"; path = "Target Support Files/Pods-NYSEStock-NYSEStockUITests/Pods-NYSEStock-NYSEStockUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		25493120272A28C000C58C70 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		25B5E221270FEB5400155C60 /* NYSEStock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NYSEStock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25B5E224270FEB5400155C60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25B5E226270FEB5400155C60 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				25B5E26327191C0F00155C60 /* StockNetworkingCode.swift */,
 				25B5E26527191D7800155C60 /* StockTableViewCell.swift */,
 				25B5E26627191D7800155C60 /* StockTableViewCell.xib */,
+				25493120272A28C000C58C70 /* DetailsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -449,6 +452,7 @@
 				25B5E26727191D7800155C60 /* StockTableViewCell.swift in Sources */,
 				25B5E25D2718077C00155C60 /* StockTableViewController.swift in Sources */,
 				25B5E225270FEB5400155C60 /* AppDelegate.swift in Sources */,
+				25493121272A28C100C58C70 /* DetailsViewController.swift in Sources */,
 				25B5E259270FEF5200155C60 /* CompanyInfo.swift in Sources */,
 				25B5E26427191C0F00155C60 /* StockNetworkingCode.swift in Sources */,
 				25B5E26227191B7000155C60 /* StockTableViewCode.swift in Sources */,
